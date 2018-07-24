@@ -54,7 +54,9 @@ var handlers=
 	.rePromt('hello nikhil');
     this.emit(':responseReady');
 	},
-	
+	'SessionEndedRequest': function () {
+            this.response.speak('Goodbye')
+            this.emit(':responseReady')},
 	
 	'DiseaseIntent': function() 
 	{
